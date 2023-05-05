@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ES5",
+    "lib": ["DOM","ESNext"],
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "module": "ESNext",
+    "esModuleInterop": true,
+    "allowJs": true,
+    "baseUrl": "."
+  },
+  "include": ["packages/**/src"],
+  "exclude": ["docs"]
+}

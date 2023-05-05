@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.json",
+  "include": ["./src"],
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "declarationDir": "lib",
+    "composite": true,
+    "rootDir": "src",
+    "baseUrl": ".",
+    "paths": {
+      "@rapide/utils": ["../utils/src"],
+      "rapide/hooks": ["../hooks/src"]
+    }
+  },
+  "references": [
+    { "path": "../utils" },
+    { "path": "../hooks" }
+  ]
+}
