@@ -10,7 +10,7 @@
     "baseUrl": ".",
     "paths": {
       "@rapide/utils": ["../utils/src"],
-      "rapide/hooks": ["../hooks/src"]
+      "@rapide/hooks": ["../hooks/src"]
     }
   },
   "references": [
