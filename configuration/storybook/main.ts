@@ -16,7 +16,7 @@ const config: StorybookConfig = {
     autodocs: "tag",
   },
   webpackFinal (config) {
-    const dirComponent = path.resolve(__dirname, '../../packages/components/src');
+    const dirComponent = path.resolve(__dirname, '../../packages/components/esm');
 
     config.resolve = {
       ...config.resolve,

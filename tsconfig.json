@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ES5",
+    "target": "ES2015",
     "lib": ["DOM","ESNext"],
     "jsx": "react",
     "resolveJsonModule": true,
@@ -11,6 +11,6 @@
     "allowJs": true,
     "baseUrl": "."
   },
-  "include": ["packages/**/src"],
+  "include": ["packages/**/src", "scripts"],
   "exclude": ["docs"]
 }

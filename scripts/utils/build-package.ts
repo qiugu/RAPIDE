@@ -10,8 +10,12 @@ export interface BuildOptions {
 }
 
 export default async function buildPackage(_packageName: string, options?: BuildOptions) {
-  console.log(options,'pppp')
   const packagePath = await locatePackage(_packageName);
+
+  if (!packagePath) {
+    console.error(`Package ${_packageName} does not exist`);
+    process.exit(1);
+  }
 
   try {
     for (const format of options?.formats) {

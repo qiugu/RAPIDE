@@ -1,10 +1,20 @@
 import path from 'path';
 import fs from 'fs-extra';
 
-export default async function getPackagesList() {
+interface PackageJson {
+  name: string;
+}
+
+interface PackageInfo {
+  path: string;
+  packageJsonPath: string;
+  packageJson: PackageJson;
+}
+
+export default async function getPackagesList(): Promise<PackageInfo[]> {
   const basePath = path.resolve(__dirname, '../../packages');
   const pkgPaths = await fs.readdir(basePath);
-  const packages = [];
+  const packages: PackageInfo[] = [];
 
   for (const pkgPath of pkgPaths) {
     const pkgJsonPath = path.resolve(basePath, pkgPath, 'package.json');
@@ -16,7 +26,7 @@ export default async function getPackagesList() {
         packageJson: await fs.readJSON(pkgJsonPath)
       });
     }
-
-    return packages;
   }
+
+  return packages;
 }
